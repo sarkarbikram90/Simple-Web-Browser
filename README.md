@@ -1,35 +1,50 @@
-# Simple-Web-Browser
-This project is a simple web browser built using Python and PyQt5. It demonstrates how to create a basic browser interface with essential features like a URL bar and page rendering.
+# NEXUS Browser 🌌
 
-Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/Simple-Web-Browser.git
-   cd simple-web-browser
+A sci-fi browser built with Streamlit — jaw-dropping animated UI that changes theme on every page load.
 
-Create and activate a virtual environment:
+## ✨ Themes (Random on Each Load)
+- 🌊 **Deep Ocean** — fish, caustics, bubbles
+- 🔴 **Mars Surface** — dust storms, red rocks
+- 🚀 **SpaceX Launch** — rockets trail into starfield
+- 🌆 **City at Night** — cars, people walking, neon windows
+- 🏜️ **Sahara Desert** — dunes, heat shimmer, sun
+- 🌌 **Aurora Borealis** — curtains of light, pine trees
+- 🌿 **Rainforest** — light rays, falling leaves, canopy
+- 🐕 **Golden Hour Park** — animated dogs running
 
-    python -m venv venv
-    source venv/bin/activate    # On Unix or MacOS
-    venv\Scripts\activate       # On Windows
+## 🚀 Deploy to Streamlit Cloud (Free)
 
-Install the required packages:
-      
-    pip install PyQt5 PyQtWebEngine
+1. **Push to GitHub**:
+```bash
+git init
+git add app.py requirements.txt .streamlit/config.toml
+git commit -m "NEXUS Browser"
+git remote add origin https://github.com/YOUR_USERNAME/nexus-browser
+git push -u origin main
+```
 
-Usage
+2. **Deploy on [share.streamlit.io](https://share.streamlit.io)**:
+   - Connect GitHub repo
+   - Set main file: `app.py`
+   - Click Deploy
 
-Run the script using:
-    
-    python simple_browser.py
+## 📁 File Structure
+```
+nexus-browser/
+├── app.py                    ← rename browser_app.py to app.py
+├── requirements.txt
+└── .streamlit/
+    └── config.toml
+```
 
-Features:
-Simple navigation with a URL bar.
-Loads web pages using PyQtWebEngine.
+## 🔧 Features
+- **8 animated canvas backgrounds** — pure JS canvas, no libraries
+- **Multi-tab** browsing (in-memory)
+- **History & Bookmarks** (session-only)
+- **Multi-engine search**: Google, DuckDuckGo, YouTube, Wikipedia, GitHub
+- **Everything erased on close** — zero persistence
+- **Sci-fi HUD** — Orbitron font, glowing accents, scanlines
 
-License:
-This project is licensed under the MIT License.
-
-
-
-
+## ⚠️ Notes
+- Some sites block iframe embedding (X-Frame-Options). This is a limitation of web iframes, not the browser.
+- All data is in Streamlit session state — restarting the server wipes everything.
